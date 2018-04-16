@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="BSImageInfo" representedClassName="BSImageInfo" syncable="YES">
+        <attribute name="localFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stackOverflowUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BSStackOverflowUser" inverseName="imageInfo" inverseEntity="BSStackOverflowUser" syncable="YES"/>
+    </entity>
+    <entity name="BSStackOverflowUser" representedClassName="BSStackOverflowUser" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="badgeBronze" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="badgeGold" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="badgeSilver" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reputation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="imageInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BSImageInfo" inverseName="stackOverflowUser" inverseEntity="BSImageInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BSStackOverflowUser" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="BSImageInfo" positionX="142" positionY="81" width="128" height="88"/>
+    </elements>
+</model>
